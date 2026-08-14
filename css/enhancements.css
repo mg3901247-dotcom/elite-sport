@@ -1,0 +1,857 @@
+/*==================================================
+  ELITESPORTS PRO — ENHANCEMENTS CSS
+  Version: 2.0.0 (Unique Naming + Premium Design)
+  Compatible with style.css ✅
+  All names use "esp-" prefix — zero conflicts ✅
+==================================================*/
+
+/*=========================================
+  1. THEME TOGGLE BUTTON 🌙☀️
+=========================================*/
+
+#esp-theme-switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(5, 224, 224, 0.25);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 0 18px rgba(5, 224, 224, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#esp-theme-switch:hover {
+  transform: scale(1.15) rotate(20deg);
+  box-shadow:
+    0 0 28px rgba(5, 224, 224, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary, #05e0e0);
+}
+
+#esp-theme-switch:active {
+  transform: scale(0.92);
+}
+
+/* ── Light Mode Overrides ── */
+[data-theme="light"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-theme="light"] header,
+[data-theme="light"] main,
+[data-theme="light"] section,
+[data-theme="light"] form,
+[data-theme="light"] footer {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] p,
+[data-theme="light"] span,
+[data-theme="light"] label,
+[data-theme="light"] li,
+[data-theme="light"] td,
+[data-theme="light"] th,
+[data-theme="light"] blockquote {
+  color: #1a1a2e !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] nav a {
+  color: #b8973b;
+}
+
+[data-theme="light"] .prices-table,
+[data-theme="light"] .activities-table {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .prices-table td,
+[data-theme="light"] .activities-table td {
+  color: #333;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .offer-card {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .offer-title,
+[data-theme="light"] .offer-detail,
+[data-theme="light"] .offer-contact-label {
+  color: #333;
+}
+
+[data-theme="light"] #assistant-panel {
+  background: #f0f0f4;
+}
+
+[data-theme="light"] #chat-messages {
+  background: #e8e8ee;
+}
+
+[data-theme="light"] .bot-message .message {
+  background: #d1d5db;
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .faq-item {
+  background: #f5f5f7;
+}
+
+[data-theme="light"] .faq-question {
+  background: #e8e8ee;
+  color: #6f388f;
+}
+
+[data-theme="light"] .faq-answer {
+  background: #f0f0f4;
+}
+
+[data-theme="light"] .faq-answer p {
+  color: #333;
+}
+
+[data-theme="light"] .testimonial {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .testimonial h3 {
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .testimonial p {
+  color: #555;
+}
+
+[data-theme="light"] .counter-section h2 {
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .counter-box span {
+  color: #333;
+}
+
+[data-theme="light"] .counter {
+  color: #0891b2;
+}
+
+[data-theme="light"] footer p {
+  color: #e1096e;
+}
+
+[data-theme="light"] .dev-badge {
+  background: coral;
+  color: #000;
+}
+
+/*=========================================
+  2. SPORTS FILTER TABS 🏅
+=========================================*/
+
+.esp-filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  padding: 8px;
+  max-width: 750px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50px;
+  border: 1px solid rgba(5, 224, 224, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.esp-filter-chip {
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text, #fff8dc);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.esp-filter-chip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #05e0e0),
+    var(--secondary, #ffd500)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.esp-filter-chip:hover {
+  color: var(--secondary, #ffd500);
+  transform: translateY(-2px);
+  border-color: rgba(255, 213, 0, 0.2);
+}
+
+.esp-filter-chip.esp-active {
+  background: linear-gradient(
+    135deg,
+    var(--primary, #05e0e0),
+    var(--secondary, #ffd500)
+  );
+  color: #111;
+  box-shadow: 0 4px 18px rgba(5, 224, 224, 0.35);
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+/* ── Sport Row Filtering ── */
+.esp-table-row {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    background 0.2s ease;
+}
+
+.esp-table-row:hover {
+  background: rgba(5, 224, 224, 0.08) !important;
+}
+
+.esp-table-row.esp-hidden {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.esp-table-row.esp-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*=========================================
+  3. COACHES SECTION 👨‍🏫
+=========================================*/
+
+.esp-coaches-section {
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 20px 0;
+}
+
+/* خلفية زخرفية */
+.esp-coaches-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(5, 224, 224, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.esp-coaches-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 213, 0, 0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.esp-coaches-section h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 12px;
+  color: var(--purple, #8377e0);
+  position: relative;
+  z-index: 1;
+}
+
+.esp-coach-subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Coach Filter ── */
+.esp-coach-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Coaches Grid ── */
+.esp-coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Coach Card ── */
+.esp-coach-card {
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  overflow: hidden;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.esp-coach-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary, #05e0e0),
+    var(--secondary, #ffd500),
+    var(--primary, #05e0e0)
+  );
+  background-size: 200% auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  animation: espShimmer 3s linear infinite;
+}
+
+@keyframes espShimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.esp-coach-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 50px rgba(5, 224, 224, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(5, 224, 224, 0.3);
+}
+
+.esp-coach-card:hover::before {
+  opacity: 1;
+}
+
+.esp-coach-photo {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  margin: 0;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.esp-coach-card:hover .esp-coach-photo {
+  transform: scale(1.06);
+}
+
+.esp-coach-info {
+  padding: 22px;
+}
+
+.esp-coach-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.esp-coach-role {
+  font-size: 13px;
+  color: var(--secondary, #ffd500);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.esp-coach-exp {
+  font-size: 12px;
+  color: #8888a0;
+  margin-bottom: 14px;
+}
+
+/* ── Rating Stars ── */
+.esp-coach-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.esp-coach-stars .star {
+  color: var(--secondary, #ffd500);
+  font-size: 15px;
+  text-shadow: 0 0 8px rgba(255, 213, 0, 0.3);
+}
+
+.esp-coach-stars .star.esp-empty {
+  color: rgba(255, 255, 255, 0.15);
+  text-shadow: none;
+}
+
+.esp-coach-stars .esp-rating-num {
+  font-size: 13px;
+  color: #8888a0;
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+/* ── Sports Tags ── */
+.esp-coach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.esp-coach-tag {
+  padding: 5px 14px;
+  border-radius: 50px;
+  background: rgba(5, 224, 224, 0.1);
+  color: var(--primary, #05e0e0);
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.esp-coach-tag:hover {
+  background: rgba(5, 224, 224, 0.2);
+  border-color: var(--primary, #05e0e0);
+  transform: translateY(-1px);
+}
+
+/* ── Book Button ── */
+.esp-coach-book {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #05e0e0),
+    var(--secondary, #ffd500)
+  );
+  background-size: 200% auto;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.esp-coach-book:hover {
+  background-position: left center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 224, 224, 0.35);
+}
+
+.esp-coach-book:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/*=========================================
+  4. BOOKING MODAL 📅
+=========================================*/
+
+.esp-booking-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: espBmFadeIn 0.3s ease;
+}
+
+@keyframes espBmFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.esp-booking-dialog {
+  background: var(--dark, #111827);
+  border: 1px solid rgba(5, 224, 224, 0.2);
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  padding: 32px;
+  max-width: 460px;
+  width: 100%;
+  direction: rtl;
+  text-align: center;
+  color: var(--text, #fff8dc);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(5, 224, 224, 0.08);
+  animation: espBmSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+@keyframes espBmSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.esp-booking-dialog h3 {
+  color: var(--secondary, #ffd500);
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+/* ── Coach Info in Modal ── */
+.esp-booking-coach {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding: 14px;
+  background: rgba(5, 224, 224, 0.08);
+  border-radius: var(--radius, 15px);
+  border: 1px solid rgba(5, 224, 224, 0.15);
+}
+
+.esp-booking-coach img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary, #05e0e0);
+  margin: 0;
+  max-width: none;
+  box-shadow: 0 0 12px rgba(5, 224, 224, 0.2);
+}
+
+.esp-booking-coach .esp-bc-info {
+  text-align: right;
+}
+
+.esp-booking-coach .esp-bc-info h4 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.esp-booking-coach .esp-bc-info p {
+  font-size: 12px;
+  color: #8888a0;
+}
+
+/* ── Inputs ── */
+.esp-booking-dialog input,
+.esp-booking-dialog select {
+  width: 100%;
+  padding: 13px 16px;
+  margin: 7px 0;
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 15px;
+  font-family: "Noto Sans", sans-serif;
+  outline: none;
+  transition: all 0.25s ease;
+  direction: rtl;
+}
+
+.esp-booking-dialog input:focus,
+.esp-booking-dialog select:focus {
+  border-color: var(--primary, #05e0e0);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(5, 224, 224, 0.15);
+}
+
+.esp-booking-dialog input::placeholder {
+  color: #8888a0;
+}
+
+.esp-booking-dialog select option {
+  background: var(--dark, #111827);
+  color: #fff;
+}
+
+/* ── Submit Button ── */
+.esp-booking-confirm {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border: none;
+  border-radius: var(--radius-card, 25px) 0 var(--radius-card, 25px) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #05e0e0),
+    var(--secondary, #ffd500)
+  );
+  background-size: 200% auto;
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.esp-booking-confirm:hover {
+  background-position: left center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 224, 224, 0.35);
+}
+
+.esp-booking-confirm:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Close Button ── */
+.esp-booking-close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.esp-booking-close:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  transform: rotate(90deg);
+}
+
+/* ── Success State ── */
+.esp-booking-success {
+  padding: 24px;
+  text-align: center;
+  animation: espBmSlideUp 0.4s ease;
+}
+
+.esp-booking-success .esp-bs-icon {
+  font-size: 56px;
+  margin-bottom: 14px;
+  animation: espBsBounce 0.6s ease;
+}
+
+@keyframes espBsBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.esp-booking-success h4 {
+  color: #2ed573;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.esp-booking-success p {
+  color: #8888a0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/*=========================================
+  5. RESPONSIVE 📱
+=========================================*/
+
+@media (max-width: 768px) {
+  .esp-coaches-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+
+  .esp-coaches-section h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .esp-coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .esp-coaches-section {
+    padding: 50px 15px;
+  }
+
+  .esp-coaches-section h2 {
+    font-size: 22px;
+  }
+
+  .esp-filter-chip {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .esp-filter-bar {
+    gap: 6px;
+    padding: 5px;
+  }
+
+  #esp-theme-switch {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    /* ملحوظة: مكان الزرار بيتحدد ديناميكيًا من enhancements.js على كل المقاسات */
+  }
+
+  .esp-booking-dialog {
+    padding: 22px;
+    margin: 10px;
+  }
+
+  .esp-coach-photo {
+    height: 180px;
+  }
+}
+
+@media (max-width: 380px) {
+  .esp-filter-chip {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
+  .esp-coach-info {
+    padding: 16px;
+  }
+}
+
+/*=========================================
+  6. ACCESSIBILITY ♿
+=========================================*/
+
+:focus-visible {
+  outline: 2px solid var(--primary, #05e0e0);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esp-coach-card,
+  .esp-filter-chip,
+  .esp-coach-book,
+  .esp-booking-dialog,
+  #esp-theme-switch,
+  .esp-coach-photo,
+  .esp-coach-card::before {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/*=========================================
+  7. PRINT 🖨️
+=========================================*/
+
+@media print {
+  #esp-theme-switch,
+  #fabMain,
+  #fabMenu,
+  .scroll-buttons,
+  .brightness-control,
+  #assistant-toggle,
+  #assistant-panel,
+  #sportsTicker,
+  .esp-filter-bar,
+  .esp-coach-filter-bar {
+    display: none !important;
+  }
+}
+
+/*=========================================
+  END OF ENHANCEMENTS
+=========================================*/

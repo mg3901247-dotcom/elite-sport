@@ -1,0 +1,1786 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | EliteSports Pro</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ تم تصحيح المسار -->
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <a href="index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back Home
+    </a>
+
+    <section class="gallery-section">
+      <div class="section-intro">
+        <p class="intro-text">My Sport Center Is The Best Center</p>
+        <p class="intro-name">My Name Is <em>Muhammad</em></p>
+      </div>
+
+      <hr />
+
+      <h2 class="gallery-title">🏆 Our Sports Gallery</h2>
+      <p class="gallery-subtitle">Explore 56 Professional Sports Photos</p>
+
+      <div class="gallery-tabs">
+        <button class="tab-btn active" data-filter="all">
+          <i class="fa-solid fa-images"></i>
+          <span>All Sports</span>
+          <span class="tab-count" id="count-all">75</span>
+        </button>
+        <button class="tab-btn" data-filter="football">
+          <i class="fa-solid fa-futbol"></i>
+          <span>Football</span>
+          <span class="tab-count">9</span>
+        </button>
+        <button class="tab-btn" data-filter="basketball">
+          <i class="fa-solid fa-basketball"></i>
+          <span>Basketball</span>
+          <span class="tab-count">9</span>
+        </button>
+        <button class="tab-btn" data-filter="volleyball">
+          <i class="fa-solid fa-volleyball"></i>
+          <span>Volleyball</span>
+          <span class="tab-count">8</span>
+        </button>
+        <button class="tab-btn" data-filter="tennis">
+          <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+          <span>Tennis</span>
+          <span class="tab-count">9</span>
+        </button>
+        <button class="tab-btn" data-filter="swimming">
+          <i class="fa-solid fa-person-swimming"></i>
+          <span>Swimming</span>
+          <span class="tab-count">9</span>
+        </button>
+        <button class="tab-btn" data-filter="boxing">
+          <i class="fa-solid fa-hand-fist"></i>
+          <span>Boxing</span>
+          <span class="tab-count">13</span>
+        </button>
+        <button class="tab-btn" data-filter="yoga">
+          <i class="fa-solid fa-spa"></i>
+          <span>Yoga</span>
+          <span class="tab-count">8</span>
+        </button>
+        <button class="tab-btn" data-filter="fitness">
+          <i class="fa-solid fa-dumbbell"></i>
+          <span>Fitness</span>
+          <span class="tab-count">10</span>
+        </button>
+      </div>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="gallerySearch" placeholder="Search sport..." />
+        <span class="search-counter">
+          Showing <span id="visibleCount">56</span> of 56 photos
+        </span>
+      </div>
+
+      <div class="gallery-grid" id="gallery">
+        <!-- Football (9) -->
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football Field"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Field</h3>
+            <p>ملعب كرة قدم احترافي</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/29920213/pexels-photo-29920213.jpeg?w=600"
+            alt="Football"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Professional match shot</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/32179279/pexels-photo-32179279.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Dynamic gameplay</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/32285155/pexels-photo-32285155.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Stadium atmosphere</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/32285244/pexels-photo-32285244.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Player in action</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/32285163/pexels-photo-32285163.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Match moment</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/32285126/pexels-photo-32285126.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Training session</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/32266316/pexels-photo-32266316.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Team celebration</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="football"
+          data-name="Football action photo 8"
+        >
+          <img
+            src="https://images.pexels.com/photos/32179310/pexels-photo-32179310.jpeg?w=600"
+            alt="Football"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-futbol"></i> Football</span
+            >
+            <h3>Football Action</h3>
+            <p>Victory moment</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Basketball (8) -->
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball Court"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Court</h3>
+            <p>ملعب كرة سلة حديث</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/13179883/pexels-photo-13179883.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Slam dunk moment</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/34688570/pexels-photo-34688570.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Court action</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/37080042/pexels-photo-37080042.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Three pointer</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/5275524/pexels-photo-5275524.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Game intensity</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/6076497/pexels-photo-6076497.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Player focus</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/13707176/pexels-photo-13707176.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Dribbling skills</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/6076400/pexels-photo-6076400.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Team play</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="basketball"
+          data-name="Basketball action photo 8"
+        >
+          <img
+            src="https://images.pexels.com/photos/9634934/pexels-photo-9634934.jpeg?w=600"
+            alt="Basketball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-basketball"></i> Basketball</span
+            >
+            <h3>Basketball Action</h3>
+            <p>Winning shot</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Volleyball (7) -->
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball Court"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Court</h3>
+            <p>ملعب كرة طائرة احترافي</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/35514787/pexels-photo-35514787.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Powerful spike</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/6180401/pexels-photo-6180401.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Beach volleyball</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/6203632/pexels-photo-6203632.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Sand court</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/35514775/pexels-photo-35514775.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Match point</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/9832120/pexels-photo-9832120.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Team coordination</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/6203581/pexels-photo-6203581.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Summer game</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="volleyball"
+          data-name="Volleyball action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/6203534/pexels-photo-6203534.jpeg?w=600"
+            alt="Volleyball"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-volleyball"></i> Volleyball</span
+            >
+            <h3>Volleyball Action</h3>
+            <p>Fun in the sun</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Tennis (7) -->
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Squash Court"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600"
+            alt="Squash"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Squash</span
+            >
+            <h3>Squash Court</h3>
+            <p>ملعب إسكواش حديث</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis Court"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Court</h3>
+            <p>ملعب تنس احترافي</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/35214667/pexels-photo-35214667.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Powerful serve</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/30575115/pexels-photo-30575115.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Backhand shot</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/10612276/pexels-photo-10612276.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Professional match</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/3207474/pexels-photo-3207474.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Court action</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/29439343/pexels-photo-29439343.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Focus and skill</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/22931875/pexels-photo-22931875.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Training session</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="tennis"
+          data-name="Tennis action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/34408888/pexels-photo-34408888.jpeg?w=600"
+            alt="Tennis"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</span
+            >
+            <h3>Tennis Action</h3>
+            <p>Victory pose</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Swimming (8) -->
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming Pool"
+        >
+          <img
+            src="https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Pool</h3>
+            <p>حمام سباحة أولمبي</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/18092431/pexels-photo-18092431.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Pool training</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/5269487/pexels-photo-5269487.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Freestyle stroke</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/36018788/pexels-photo-36018788.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Olympic pool</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/6011880/pexels-photo-6011880.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Underwater shot</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/8688609/pexels-photo-8688609.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Swimmer focus</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/18353095/pexels-photo-18353095.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Competition day</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/8688165/pexels-photo-8688165.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Training hard</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="swimming"
+          data-name="Swimming action photo 8"
+        >
+          <img
+            src="https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?w=600"
+            alt="Swimming"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-swimming"></i> Swimming</span
+            >
+            <h3>Swimming Action</h3>
+            <p>Crystal clear water</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Boxing (8) -->
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Martial Arts"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600"
+            alt="Martial Arts"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Martial Arts</span
+            >
+            <h3>Martial Arts</h3>
+            <p>صالة فنون قتال متنوعة</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Athletics"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=600"
+            alt="Athletics"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-person-running"></i> Athletics</span
+            >
+            <h3>Athletics</h3>
+            <p>مضمار ألعاب القوى</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing Gym"
+        >
+          <img
+            src="https://images.pexels.com/photos/7991616/pexels-photo-7991616.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Gym</h3>
+            <p>صالة ملاكمة متكاملة</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Wrestling"
+        >
+          <img
+            src="https://images.pexels.com/photos/30513967/pexels-photo-30513967.jpeg?w=600"
+            alt="Wrestling"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Wrestling</span
+            >
+            <h3>Wrestling</h3>
+            <p>صالة مصارعة احترافية</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Taekwondo"
+        >
+          <img
+            src="https://images.pexels.com/photos/598622/pexels-photo-598622.jpeg?w=600"
+            alt="Taekwondo"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Taekwondo</span
+            >
+            <h3>Taekwondo</h3>
+            <p>تدريب التايكوندو</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Kickboxing"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1517438322307-e67111335449?w=600"
+            alt="Kickboxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Kickboxing</span
+            >
+            <h3>Kickboxing</h3>
+            <p>صالة كيك بوكسينج</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/31403621/pexels-photo-31403621.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Training session</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/28238742/pexels-photo-28238742.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Ring action</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/8745178/pexels-photo-8745178.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Heavy bag workout</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/27302386/pexels-photo-27302386.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Champion training</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/5424566/pexels-photo-5424566.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Power punch</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/24782482/pexels-photo-24782482.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Focus training</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/31485125/pexels-photo-31485125.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Sparring session</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="boxing"
+          data-name="Boxing action photo 8"
+        >
+          <img
+            src="https://images.pexels.com/photos/6740342/pexels-photo-6740342.jpeg?w=600"
+            alt="Boxing"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-hand-fist"></i> Boxing</span
+            >
+            <h3>Boxing Action</h3>
+            <p>Gym atmosphere</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Yoga (7) -->
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga Studio"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Studio</h3>
+            <p>استوديو يوجا هادي</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/15641820/pexels-photo-15641820.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Mindful practice</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/6303447/pexels-photo-6303447.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Peaceful moment</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/3822454/pexels-photo-3822454.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Balance and focus</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/32794958/pexels-photo-32794958.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Studio class</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 5"
+        >
+          <img
+            src="https://images.pexels.com/photos/13173120/pexels-photo-13173120.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Outdoor practice</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/16131154/pexels-photo-16131154.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Meditation time</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="yoga"
+          data-name="Yoga action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/16131310/pexels-photo-16131310.jpeg?w=600"
+            alt="Yoga"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"><i class="fa-solid fa-spa"></i> Yoga</span>
+            <h3>Yoga Session</h3>
+            <p>Inner peace</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <!-- Fitness (7) -->
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness Training"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness Training</h3>
+            <p>تمارين لياقة جماعية</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="CrossFit"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600"
+            alt="CrossFit"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> CrossFit</span
+            >
+            <h3>CrossFit</h3>
+            <p>تمارين كروس فت مكثفة</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 1"
+        >
+          <img
+            src="https://images.pexels.com/photos/4716814/pexels-photo-4716814.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Weight training</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 2"
+        >
+          <img
+            src="https://images.pexels.com/photos/32610333/pexels-photo-32610333.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Modern equipment</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 3"
+        >
+          <img
+            src="https://images.pexels.com/photos/6628962/pexels-photo-6628962.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Strength training</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 4"
+        >
+          <img
+            src="https://images.pexels.com/photos/9545914/pexels-photo-9545914.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Workout session</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 6"
+        >
+          <img
+            src="https://images.pexels.com/photos/32695898/pexels-photo-32695898.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Cardio workout</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Fitness & Gym action photo 7"
+        >
+          <img
+            src="https://images.pexels.com/photos/6389506/pexels-photo-6389506.jpeg?w=600"
+            alt="Fitness"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Fitness</span
+            >
+            <h3>Fitness & Gym</h3>
+            <p>Pro gym setup</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+        <figure
+          class="gallery-item"
+          data-category="fitness"
+          data-name="Modern Gym Training"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+            alt="Modern gym"
+            loading="lazy"
+          />
+          <div class="item-overlay">
+            <span class="item-badge"
+              ><i class="fa-solid fa-dumbbell"></i> Gym</span
+            >
+            <h3>Modern Gym</h3>
+            <p>أحدث معدات رفع الأثقال</p>
+            <button class="view-btn">
+              <i class="fa-solid fa-expand"></i> View
+            </button>
+          </div>
+        </figure>
+      </div>
+      <div class="no-results" id="noResults">
+        <i class="fa-solid fa-search"></i>
+        <h3>No results found</h3>
+        <p>Try a different search term</p>
+      </div>
+
+      <div class="social-links">
+        <a
+          class="contact-btn"
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google</a
+        >
+        <a
+          class="contact-btn"
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Facebook</a
+        >
+        <a
+          class="contact-btn"
+          href="https://www.tiktok.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TikTok</a
+        >
+        <a
+          class="contact-btn"
+          href="https://web.whatsapp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✖</button>
+      <button class="lightbox-prev" id="lightboxPrev">❮</button>
+      <button class="lightbox-next" id="lightboxNext">❯</button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+    </div>
+
+    <!-- ✅ تم تصحيح المسار -->
+    <div class="scroll-buttons">
+      <button id="scrollTop" aria-label="Back To Top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+      <button id="scrollBottom" aria-label="Go To Bottom">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <script src="javascript/gallery.js"></script>
+    <script src="javascript/global-bg.js"></script>
+    <script src="javascript/admin-panel.js"></script>
+    <script src="javascript/enhancements.js"></script>
+  </body>
+</html>

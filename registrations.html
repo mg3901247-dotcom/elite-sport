@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>لوحة التسجيلات - EliteSports Pro</title>
+    <style>
+      :root {
+        --gold: #c9a84c;
+        --gold-light: #f0d078;
+        --bg-dark: #0a0a0f;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        background: linear-gradient(
+          160deg,
+          #0a0a0f,
+          #1a0a2e 30%,
+          #0d1b2a 60%,
+          #0a0a0f
+        );
+        color: #e8e0d0;
+        min-height: 100vh;
+        padding: 30px 20px;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      header h1 {
+        font-size: 28px;
+        font-weight: 900;
+        margin: 0 0 6px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      header p {
+        color: rgba(200, 200, 220, 0.55);
+        font-size: 14px;
+        margin: 0;
+      }
+      .toolbar {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(200, 170, 80, 0.15);
+        border-radius: 16px;
+        padding: 16px 20px;
+      }
+      .toolbar-left {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+      #searchInput {
+        flex: 1;
+        min-width: 180px;
+        padding: 11px 16px;
+        border-radius: 10px;
+        border: 1px solid rgba(200, 170, 80, 0.25);
+        background: rgba(10, 10, 20, 0.5);
+        color: #e8e0d0;
+        font-size: 14px;
+        outline: none;
+      }
+      #sportFilter {
+        padding: 11px 16px;
+        border-radius: 10px;
+        border: 1px solid rgba(200, 170, 80, 0.25);
+        background: rgba(10, 10, 20, 0.5);
+        color: #e8e0d0;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+      }
+      .btn {
+        padding: 11px 20px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        font-size: 13px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: transform 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn-export {
+        background: linear-gradient(135deg, #1e7e4a, #2ecc71);
+        color: #fff;
+      }
+      .btn-clear {
+        background: rgba(231, 76, 60, 0.15);
+        color: #e88;
+        border: 1px solid rgba(231, 76, 60, 0.3);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+      .stat-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(200, 170, 80, 0.15);
+        border-radius: 14px;
+        padding: 18px;
+        text-align: center;
+      }
+      .stat-box .num {
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--gold-light);
+      }
+      .stat-box .label {
+        font-size: 12px;
+        color: rgba(200, 200, 220, 0.55);
+        margin-top: 4px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      thead th {
+        background: rgba(200, 170, 80, 0.1);
+        color: var(--gold-light);
+        font-size: 12px;
+        padding: 14px 12px;
+        text-align: right;
+        border-bottom: 1px solid rgba(200, 170, 80, 0.2);
+      }
+      tbody td {
+        padding: 13px 12px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      tbody tr:hover {
+        background: rgba(200, 170, 80, 0.04);
+      }
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: rgba(200, 200, 220, 0.4);
+      }
+      .empty-state .icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(200, 170, 80, 0.12);
+        color: var(--gold-light);
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .del-btn {
+        background: none;
+        border: none;
+        color: rgba(231, 76, 60, 0.7);
+        cursor: pointer;
+        font-size: 15px;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+      .del-btn:hover {
+        background: rgba(231, 76, 60, 0.15);
+      }
+      .note {
+        margin-top: 26px;
+        font-size: 12px;
+        color: rgba(200, 200, 220, 0.4);
+        text-align: center;
+        line-height: 1.9;
+      }
+      @media (max-width: 700px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+        thead {
+          display: none;
+        }
+        tbody tr {
+          margin-bottom: 14px;
+          border: 1px solid rgba(200, 170, 80, 0.15);
+          border-radius: 12px;
+          padding: 10px;
+        }
+        tbody td {
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        tbody td::before {
+          content: attr(data-label);
+          color: rgba(200, 200, 220, 0.5);
+          font-weight: 700;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>📋 لوحة تحكم التسجيلات</h1>
+        <p>
+          كل التسجيلات اللي حصلت من فورم الموقع - متخزنة محليًا في هذا المتصفح
+        </p>
+      </header>
+
+      <div class="stats" id="statsRow"></div>
+
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 دور بالاسم أو الإيميل أو التليفون..."
+          />
+          <select id="sportFilter">
+            <option value="">كل الرياضات</option>
+          </select>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button class="btn btn-export" id="exportBtn">
+            ⬇️ تصدير Excel (CSV)
+          </button>
+          <button class="btn btn-clear" id="clearBtn">🗑️ مسح الكل</button>
+        </div>
+      </div>
+
+      <div id="tableWrap"></div>
+
+      <p class="note">
+        ⚠️ البيانات دي متخزنة محليًا (localStorage) في المتصفح ده بس - مش على
+        سيرفر مركزي.<br />
+        لو فتحت الموقع من جهاز أو متصفح تاني، مش هتشوف نفس البيانات هنا.<br />
+        لحل دائم ومركزي، محتاج ربط الموقع بقاعدة بيانات سحابية حقيقية (Firebase
+        / Supabase).
+      </p>
+    </div>
+
+    <script>
+      const STORAGE_KEY = "esp_registrations";
+
+      function loadRegistrations() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        } catch {
+          return [];
+        }
+      }
+      function saveRegistrations(list) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      }
+      function escapeHTML(str) {
+        const d = document.createElement("div");
+        d.textContent = str == null ? "" : String(str);
+        return d.innerHTML;
+      }
+
+      let allRegs = loadRegistrations();
+
+      function renderStats(list) {
+        const total = list.length;
+        const uniqueSports = new Set(list.map((r) => r.sport)).size;
+        const today = new Date().toDateString();
+        const todayCount = list.filter(
+          (r) => new Date(r.date).toDateString() === today,
+        ).length;
+        document.getElementById("statsRow").innerHTML = `
+        <div class="stat-box"><div class="num">${total}</div><div class="label">إجمالي التسجيلات</div></div>
+        <div class="stat-box"><div class="num">${todayCount}</div><div class="label">تسجيلات اليوم</div></div>
+        <div class="stat-box"><div class="num">${uniqueSports}</div><div class="label">رياضة مختلفة</div></div>
+      `;
+      }
+
+      function renderSportFilter(list) {
+        const sel = document.getElementById("sportFilter");
+        const current = sel.value;
+        const sports = [
+          ...new Set(list.map((r) => r.sport).filter(Boolean)),
+        ].sort();
+        sel.innerHTML =
+          '<option value="">كل الرياضات</option>' +
+          sports
+            .map(
+              (s) =>
+                `<option value="${escapeHTML(s)}">${escapeHTML(s)}</option>`,
+            )
+            .join("");
+        sel.value = current;
+      }
+
+      function renderTable(list) {
+        const wrap = document.getElementById("tableWrap");
+        if (!list.length) {
+          wrap.innerHTML = `<div class="empty-state"><div class="icon">📭</div><p>لسه مفيش أي تسجيلات.<br>هتظهر هنا تلقائيًا أول ما حد يسجل من الموقع.</p></div>`;
+          return;
+        }
+        wrap.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>الاسم</th><th>الرياضة</th><th>التليفون</th><th>الإيميل</th><th>التاريخ</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            ${list
+              .map(
+                (r) => `
+              <tr data-id="${escapeHTML(r.id)}">
+                <td data-label="الاسم">${escapeHTML(r.name)}</td>
+                <td data-label="الرياضة"><span class="badge">${escapeHTML(r.sport)}</span></td>
+                <td data-label="التليفون">${escapeHTML(r.phone)}</td>
+                <td data-label="الإيميل">${escapeHTML(r.email)}</td>
+                <td data-label="التاريخ">${new Date(r.date).toLocaleString("ar-EG")}</td>
+                <td><button class="del-btn" data-del="${escapeHTML(r.id)}" title="حذف">✖</button></td>
+              </tr>
+            `,
+              )
+              .join("")}
+          </tbody>
+        </table>`;
+        wrap.querySelectorAll("[data-del]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-del");
+            allRegs = allRegs.filter((r) => r.id !== id);
+            saveRegistrations(allRegs);
+            applyFilters();
+          });
+        });
+      }
+
+      function applyFilters() {
+        const q = document
+          .getElementById("searchInput")
+          .value.trim()
+          .toLowerCase();
+        const sport = document.getElementById("sportFilter").value;
+        let filtered = allRegs;
+        if (sport) filtered = filtered.filter((r) => r.sport === sport);
+        if (q)
+          filtered = filtered.filter(
+            (r) =>
+              (r.name || "").toLowerCase().includes(q) ||
+              (r.email || "").toLowerCase().includes(q) ||
+              (r.phone || "").toLowerCase().includes(q),
+          );
+        renderStats(allRegs);
+        renderSportFilter(allRegs);
+        renderTable(filtered);
+      }
+
+      function exportCSV() {
+        if (!allRegs.length) {
+          alert("مفيش بيانات تتصدّر.");
+          return;
+        }
+        const headers = [
+          "ID",
+          "Name",
+          "Email",
+          "Phone",
+          "Sport",
+          "Message",
+          "Date",
+        ];
+        const rows = allRegs.map((r) => [
+          r.id,
+          r.name,
+          r.email,
+          r.phone,
+          r.sport,
+          r.message,
+          r.date,
+        ]);
+        const csvContent =
+          "\uFEFF" +
+          [headers, ...rows]
+            .map((row) =>
+              row
+                .map((cell) => `"${String(cell ?? "").replace(/"/g, '""')}"`)
+                .join(","),
+            )
+            .join("\n");
+        const blob = new Blob([csvContent], {
+          type: "text/csv;charset=utf-8;",
+        });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `registrations-${new Date().toISOString().slice(0, 10)}.csv`;
+        link.click();
+      }
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", applyFilters);
+      document
+        .getElementById("sportFilter")
+        .addEventListener("change", applyFilters);
+      document.getElementById("exportBtn").addEventListener("click", exportCSV);
+      document.getElementById("clearBtn").addEventListener("click", () => {
+        if (!allRegs.length) return;
+        if (
+          confirm(
+            "متأكد إنك عايز تمسح كل التسجيلات؟ الإجراء ده مش قابل للتراجع.",
+          )
+        ) {
+          allRegs = [];
+          saveRegistrations(allRegs);
+          applyFilters();
+        }
+      });
+
+      applyFilters();
+    </script>
+  </body>
+</html>

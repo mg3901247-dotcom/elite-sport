@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c9a84c" />
+    <meta name="author" content="Muhammad Gharib &amp; Younes Gharib" />
+
+    <!-- ═══ PWA (تثبيت الموقع كتطبيق) ═══ -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="EliteSports" />
+
+    <title>EliteSports Pro | Fitness &amp; Training</title>
+
+    <meta
+      name="description"
+      content="Professional EliteSports Pro for Fitness and Training - Multiple sports activities with affordable prices"
+    />
+    <meta
+      property="og:title"
+      content="EliteSports Pro | Fitness &amp; Training"
+    />
+    <meta
+      property="og:description"
+      content="Professional EliteSports Pro for Fitness and Training"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/enhancements.css" />
+  </head>
+
+  <body>
+    <!-- ═══ Loading Screen ═══ -->
+    <div id="loading-screen">
+      <div class="loading-center">
+        <a href="#" class="logo">
+          <img
+            src="images/521fe9e4-adf5-4db0-8111-1235c1677238.png"
+            alt="EliteSports Pro Logo"
+          />
+          <span>EliteSports Pro</span>
+          <img
+            src="images/521fe9e4-adf5-4db0-8111-1235c1677238.png"
+            alt="EliteSports Pro Logo"
+          />
+        </a>
+        <p class="welcome-text">مرحبًا بك في أفضل مركز رياضي</p>
+        <p class="waiting-text">من فضلك انتظر قليلاً...</p>
+        <p id="loading-status">جاري تحميل الملفات...</p>
+        <div class="loader-bar">
+          <div id="loader-fill"></div>
+        </div>
+        <div id="loading-percent">0%</div>
+        <button id="enter-site-btn">🚀 Enter The Web</button>
+      </div>
+    </div>
+    <div class="dev-badge">إعداد المبرمج / محمد غريب و يونس غريب</div>
+    <!-- ═══ Header ═══ -->
+    <header>
+      <h1>بسم الله الرحمن الرحيم</h1>
+      <h2>السلام عليكم ورحمة الله وبركاته</h2>
+
+      <h3>قال رسول الله ﷺ:</h3>
+      <h3>
+        «الْمُؤْمِنُ الْقَوِيُّ خَيْرٌ وَأَحَبُّ إِلَى اللَّهِ مِنَ الْمُؤْمِنِ
+        الضَّعِيفِ، وَفِي كُلٍّ خَيْرٍ...»
+      </h3>
+      <h3>رواه صحيح مسلم.</h3>
+      <h3>صدق رسول الله صلى الله عليه وسلم</h3>
+      <h3 class="hadith-explain">دعوني اشرح لحضراتكم معنى هذا الحديث الشريف</h3>
+      <h3 class="hadith-meaning">
+        المعنى: يشمل القوة في الإيمان، والعلم، والأخلاق، وكذلك القوة البدنية
+        التي تعين المسلم على طاعة الله وخدمة الناس.
+      </h3>
+
+      <blockquote>بسم الله الرحمن الرحيم</blockquote>
+      <blockquote>
+        وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ وَمِن رِّبَاطِ
+        الْخَيْلِ تُرْهِبُونَ بِهِ عَدُوَّ اللَّهِ وَعَدُوَكُمْ وَآخَرِينَ مِن
+        دُونِهِمْ لَا تَعْلَمُونَهُمُ اللَّهُ يَعْلَمُهُمْ ۚ وَمَا تُنفِقُوا مِن
+        شَيْءٍ فِي سَبِيلِ اللَّهِ يُوَفَّ إِلَيْكُمْ وَأَنتُمْ لَا تُظْلَمُونَ
+      </blockquote>
+      <blockquote>صدق الله العظيم</blockquote>
+
+      <h1>🏆 EliteSports Pro 🏆</h1>
+      <p>Welcome To Our Professional EliteSports Pro</p>
+
+      <div class="search-box">
+        <label for="site-search">Search</label>
+        <input id="site-search" type="search" placeholder="Search" />
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#activities">Activities</a>
+        <a href="gallery.html">🖼️ Gallery</a>
+        <a href="#prices">Prices</a>
+        <a href="#registration">Login</a>
+        <a href="#mental-arithmetic">Mental Arithmetic</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ═══ Main Content ═══ -->
+    <main>
+      <h2 id="facilities-heading">Our Facilities</h2>
+
+      <div style="text-align: center; margin: 20px 0">
+        <a href="gallery.html" class="gallery-link"
+          >🖼️ View Full Gallery (56 Photos)</a
+        >
+      </div>
+
+      <!-- ── Activities Section ── -->
+      <section id="activities" aria-labelledby="activities-heading">
+        <h2 id="activities-heading">We Have All Sports</h2>
+        <p class="section-subtitle-gold">
+          Activities & Fields <span>الانشطه & الملاعب</span>
+        </p>
+
+        <table class="activities-table">
+          <thead>
+            <tr>
+              <th>Names of activities and fields in English</th>
+              <th>اسم الانشطه و المجالات بالعربيه</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>⚽ Football</td>
+              <td class="arabic-name">كرة القدم</td>
+            </tr>
+            <tr>
+              <td>🏀 Basketball</td>
+              <td>كرة السلة</td>
+            </tr>
+            <tr>
+              <td>🏐 Volleyball</td>
+              <td class="arabic-name">الكرة الطائرة</td>
+            </tr>
+            <tr>
+              <td>🤾 Handball</td>
+              <td class="arabic-name">كرة اليد</td>
+            </tr>
+            <tr>
+              <td>🤽 Water Polo</td>
+              <td class="arabic-name">كرة الماء</td>
+            </tr>
+            <tr>
+              <td>🎾 Squash</td>
+              <td class="arabic-name">الإسكواش</td>
+            </tr>
+            <tr>
+              <td>🎾 Tennis</td>
+              <td class="arabic-name">التنس</td>
+            </tr>
+            <tr>
+              <td>🏓 Table Tennis</td>
+              <td class="arabic-name">تنس الطاولة</td>
+            </tr>
+            <tr>
+              <td>🏸 Badminton</td>
+              <td class="arabic-name">الريشة الطائرة</td>
+            </tr>
+            <tr>
+              <td>🏊 Swimming</td>
+              <td class="arabic-name">السباحة</td>
+            </tr>
+            <tr>
+              <td>🏃 Athletics</td>
+              <td class="arabic-name">ألعاب القوى</td>
+            </tr>
+            <tr>
+              <td>🏃 Running</td>
+              <td class="arabic-name">الجري</td>
+            </tr>
+            <tr>
+              <td>🚴 Cycling</td>
+              <td class="arabic-name">ركوب الدراجات</td>
+            </tr>
+            <tr>
+              <td>🥊 Boxing</td>
+              <td class="arabic-name">الملاكمة</td>
+            </tr>
+            <tr>
+              <td>🤼 Wrestling</td>
+              <td class="arabic-name">المصارعة</td>
+            </tr>
+            <tr>
+              <td>🥋 Judo</td>
+              <td class="arabic-name">الجودو</td>
+            </tr>
+            <tr>
+              <td>🥋 Karate</td>
+              <td class="arabic-name">الكاراتيه</td>
+            </tr>
+            <tr>
+              <td>🥋 Taekwondo</td>
+              <td class="arabic-name">التايكوندو</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="activities-table">
+          <thead>
+            <tr>
+              <th>Names of activities and fields in English</th>
+              <th>اسم الانشطه و المجالات بالعربيه</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🥊 Kickboxing</td>
+              <td class="arabic-name">الكيك بوكسينج</td>
+            </tr>
+            <tr>
+              <td>🥋 Kung Fu</td>
+              <td class="arabic-name">الكونغ فو</td>
+            </tr>
+            <tr>
+              <td>🤼 Sambo</td>
+              <td class="arabic-name">السامبو</td>
+            </tr>
+            <tr>
+              <td>🤺 Fencing</td>
+              <td class="arabic-name">المبارزة</td>
+            </tr>
+            <tr>
+              <td>🏋️ Weightlifting</td>
+              <td class="arabic-name">رفع الأثقال</td>
+            </tr>
+            <tr>
+              <td>🤸 Gymnastics</td>
+              <td class="arabic-name">الجمباز</td>
+            </tr>
+            <tr>
+              <td>🎯 Shooting</td>
+              <td class="arabic-name">الرماية</td>
+            </tr>
+            <tr>
+              <td>🏹 Archery</td>
+              <td class="arabic-name">الرماية بالقوس</td>
+            </tr>
+            <tr>
+              <td>🐎 Equestrian</td>
+              <td class="arabic-name">الفروسية</td>
+            </tr>
+            <tr>
+              <td>🚣 Rowing</td>
+              <td class="arabic-name">التجديف</td>
+            </tr>
+            <tr>
+              <td>🛶 Canoe/Kayak</td>
+              <td class="arabic-name">الكانوي والكاياك</td>
+            </tr>
+            <tr>
+              <td>⛵ Sailing</td>
+              <td class="arabic-name">الشراع</td>
+            </tr>
+            <tr>
+              <td>🤿 Diving</td>
+              <td class="arabic-name">الغطس</td>
+            </tr>
+            <tr>
+              <td>🎿 Water Skiing</td>
+              <td class="arabic-name">التزلج على الماء</td>
+            </tr>
+            <tr>
+              <td>♟️ Chess</td>
+              <td class="arabic-name">الشطرنج</td>
+            </tr>
+            <tr>
+              <td>🎱 Billiards</td>
+              <td class="arabic-name">البلياردو</td>
+            </tr>
+            <tr>
+              <td>🏅 Modern Pentathlon</td>
+              <td class="arabic-name">الخماسي الحديث</td>
+            </tr>
+            <tr>
+              <td>🏊 Triathlon</td>
+              <td class="arabic-name">الترياثلون</td>
+            </tr>
+            <tr>
+              <td>🛹 Skateboarding</td>
+              <td class="arabic-name">التزلج على اللوح</td>
+            </tr>
+            <tr>
+              <td>🧗 Rock Climbing</td>
+              <td class="arabic-name">تسلق الصخور</td>
+            </tr>
+            <tr>
+              <td>🧘 Yoga</td>
+              <td class="arabic-name">اليوجا</td>
+            </tr>
+            <tr>
+              <td>💪 Fitness</td>
+              <td class="arabic-name">اللياقة البدنية</td>
+            </tr>
+            <tr>
+              <td>🏋️ CrossFit</td>
+              <td class="arabic-name">كروس فت</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── Prices Section ── -->
+      <section id="prices" aria-labelledby="prices-heading">
+        <h2 id="prices-heading">Affordable Prices</h2>
+        <p class="section-subtitle-gold">
+          💰 أسعارنا بعد الخصم | جميع الأسعار شهرية بالجنيه المصري
+        </p>
+
+        <table class="prices-table">
+          <thead>
+            <tr>
+              <th>⚡ Sport</th>
+              <th>💸 Old Price</th>
+              <th>✨ New Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sport-emoji">⚽</span>Football</td>
+              <td><del>500 EGP</del></td>
+              <td>300 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏀</span>Basketball</td>
+              <td><del>600 EGP</del></td>
+              <td>400 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏐</span>Volleyball</td>
+              <td><del>550 EGP</del></td>
+              <td>350 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤾</span>Handball</td>
+              <td><del>500 EGP</del></td>
+              <td>350 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤽</span>Water Polo</td>
+              <td><del>900 EGP</del></td>
+              <td>600 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🎾</span>Squash</td>
+              <td><del>750 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🎾</span>Tennis</td>
+              <td><del>900 EGP</del></td>
+              <td>600 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏓</span>Table Tennis</td>
+              <td><del>450 EGP</del></td>
+              <td>300 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏸</span>Badminton</td>
+              <td><del>600 EGP</del></td>
+              <td>400 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏊</span>Swimming</td>
+              <td><del>1000 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏃</span>Athletics</td>
+              <td><del>800 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏃</span>Running</td>
+              <td><del>600 EGP</del></td>
+              <td>400 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🚴</span>Cycling</td>
+              <td><del>700 EGP</del></td>
+              <td>450 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🥊</span>Boxing</td>
+              <td><del>900 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤼</span>Wrestling</td>
+              <td><del>700 EGP</del></td>
+              <td>450 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🥋</span>Judo</td>
+              <td><del>800 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🥋</span>Karate</td>
+              <td><del>700 EGP</del></td>
+              <td>450 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🥋</span>Taekwondo</td>
+              <td><del>750 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="prices-table">
+          <thead>
+            <tr>
+              <th>⚡ Sport</th>
+              <th>💸 Old Price</th>
+              <th>✨ New Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sport-emoji">🥊</span>Kickboxing</td>
+              <td><del>850 EGP</del></td>
+              <td>550 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🥋</span>Kung Fu</td>
+              <td><del>800 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤼</span>Sambo</td>
+              <td><del>850 EGP</del></td>
+              <td>550 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤺</span>Fencing</td>
+              <td><del>1100 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏋️</span>Weightlifting</td>
+              <td><del>900 EGP</del></td>
+              <td>600 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤸</span>Gymnastics</td>
+              <td><del>1100 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🎯</span>Shooting</td>
+              <td><del>1200 EGP</del></td>
+              <td>1000 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏹</span>Archery</td>
+              <td><del>900 EGP</del></td>
+              <td>600 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🐎</span>Equestrian</td>
+              <td><del>2200 EGP</del></td>
+              <td>1500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🚣</span>Rowing</td>
+              <td><del>1100 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🛶</span>Canoe/Kayak</td>
+              <td><del>1200 EGP</del></td>
+              <td>800 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">⛵</span>Sailing</td>
+              <td><del>1500 EGP</del></td>
+              <td>1000 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🤿</span>Diving</td>
+              <td><del>1400 EGP</del></td>
+              <td>900 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🎿</span>Water Skiing</td>
+              <td><del>1800 EGP</del></td>
+              <td>1200 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">♟️</span>Chess</td>
+              <td><del>400 EGP</del></td>
+              <td>250 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🎱</span>Billiards</td>
+              <td><del>550 EGP</del></td>
+              <td>350 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏅</span>Modern Pentathlon</td>
+              <td><del>1600 EGP</del></td>
+              <td>1000 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏊</span>Triathlon</td>
+              <td><del>1700 EGP</del></td>
+              <td>1100 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🛹</span>Skateboarding</td>
+              <td><del>800 EGP</del></td>
+              <td>500 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🧗</span>Rock Climbing</td>
+              <td><del>1100 EGP</del></td>
+              <td>700 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🧘</span>Yoga</td>
+              <td><del>650 EGP</del></td>
+              <td>400 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">💪</span>Fitness</td>
+              <td><del>700 EGP</del></td>
+              <td>450 EGP</td>
+            </tr>
+            <tr>
+              <td><span class="sport-emoji">🏋️</span>CrossFit</td>
+              <td><del>950 EGP</del></td>
+              <td>600 EGP</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── Pricing Calculator & Plan Comparison (pricing-tools.js) ── -->
+      <div id="pricing-calculator-root"></div>
+      <div id="plan-comparison-root"></div>
+
+      <!-- ── Offers Section ── -->
+      <div class="offers-container">
+        <section class="offer-card">
+          <div class="offer-title">
+            يوجد لدينا العديد من العروض بخصوص الافتتاح:
+          </div>
+          <div class="offer-detail">عرض لاول 500 زائر</div>
+          <div class="offer-highlight">خصم 25%</div>
+          <div class="offer-detail">المركز سوف يستضيف 2000 زائر</div>
+          <div class="offer-urgent">اسرعوا الاماكن قاربت من النفاذ</div>
+          <div class="offer-contact-label">
+            اتصلوا على هذا الرقم للحجز والاستعلام:
+          </div>
+          <div class="offer-phone">01098860054</div>
+        </section>
+        <section class="offer-card">
+          <div class="offer-title">
+            يوجد لدينا العديد من العروض بخصوص الافتتاح:
+          </div>
+          <div class="offer-detail">عرض لاول 500 زائر</div>
+          <div class="offer-highlight">خصم 25%</div>
+          <div class="offer-detail">المركز سوف يستضيف 2000 زائر</div>
+          <div class="offer-urgent">اسرعوا الاماكن قاربت من النفاذ</div>
+          <div class="offer-contact-label">
+            اتصلوا على هذا الرقم للحجز والاستعلام:
+          </div>
+          <div class="offer-phone">01098860054</div>
+        </section>
+      </div>
+
+      <!-- ── Registration Form ── -->
+      <section id="registration" aria-labelledby="registration-heading">
+        <h2 id="registration-heading">Registration Form</h2>
+
+        <form
+          id="registration-form"
+          action="https://www.google.com"
+          method="GET"
+          target="_blank"
+        >
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="reg-username"
+                name="username"
+                required
+                placeholder="Username"
+                minlength="4"
+                maxlength="25"
+                autofocus
+                autocomplete="username"
+              />
+              <span
+                class="clear-btn"
+                role="button"
+                tabindex="0"
+                aria-label="Clear username field"
+                >✖</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="reg-password"
+                name="password"
+                required
+                placeholder="Password"
+                minlength="8"
+                maxlength="16"
+                autocomplete="current-password"
+              />
+              <span
+                class="clear-btn"
+                role="button"
+                tabindex="0"
+                aria-label="Clear password field"
+                >✖</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-phone">Phone Number</label>
+            <div class="input-wrapper">
+              <input
+                type="tel"
+                id="reg-phone"
+                name="phone"
+                required
+                placeholder="Phone Number"
+                minlength="11"
+                maxlength="11"
+                autocomplete="tel"
+                pattern="[0-9]{11}"
+              />
+              <span
+                class="clear-btn"
+                role="button"
+                tabindex="0"
+                aria-label="Clear phone number field"
+                >✖</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="reg-email"
+                name="email"
+                required
+                placeholder="Email"
+                maxlength="50"
+                autocomplete="email"
+              />
+              <span
+                class="clear-btn"
+                role="button"
+                tabindex="0"
+                aria-label="Clear email field"
+                >✖</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group form-group--full">
+            <label for="reg-message">Message</label>
+            <div class="input-wrapper input-wrapper--textarea">
+              <textarea
+                id="reg-message"
+                name="message"
+                rows="10"
+                cols="60"
+                required
+                minlength="20"
+                maxlength="1000"
+                placeholder="Write your comment here..."
+              ></textarea>
+              <span
+                class="clear-btn"
+                role="button"
+                tabindex="0"
+                aria-label="Clear message field"
+                >✖</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-sport">Choose The Sport You Prefer</label>
+            <input
+              list="sports-list"
+              id="reg-sport"
+              name="preferred_sport"
+              required
+              placeholder="Choose The Sport"
+              autocomplete="off"
+            />
+            <datalist id="sports-list">
+              <option value="Football"></option>
+              <option value="Basketball"></option>
+              <option value="Volleyball"></option>
+              <option value="Handball"></option>
+              <option value="Water Polo"></option>
+              <option value="Squash"></option>
+              <option value="Tennis"></option>
+              <option value="Table Tennis"></option>
+              <option value="Badminton"></option>
+              <option value="Swimming"></option>
+              <option value="Athletics"></option>
+              <option value="Running"></option>
+              <option value="Cycling"></option>
+              <option value="Boxing"></option>
+              <option value="Wrestling"></option>
+              <option value="Judo"></option>
+              <option value="Karate"></option>
+              <option value="Taekwondo"></option>
+              <option value="Kickboxing"></option>
+              <option value="Kung Fu"></option>
+              <option value="Sambo"></option>
+              <option value="Fencing"></option>
+              <option value="Weightlifting"></option>
+              <option value="Gymnastics"></option>
+              <option value="Shooting"></option>
+              <option value="Archery"></option>
+              <option value="Equestrian"></option>
+              <option value="Rowing"></option>
+              <option value="Canoe/Kayak"></option>
+              <option value="Sailing"></option>
+              <option value="Diving"></option>
+              <option value="Water Skiing"></option>
+              <option value="Chess"></option>
+              <option value="Billiards"></option>
+              <option value="Modern Pentathlon"></option>
+              <option value="Triathlon"></option>
+              <option value="Skateboarding"></option>
+              <option value="Rock Climbing"></option>
+              <option value="Yoga"></option>
+              <option value="Fitness"></option>
+              <option value="CrossFit"></option>
+            </datalist>
+          </div>
+
+          <hr />
+
+          <fieldset class="form-fieldset">
+            <legend>Select Your Favorite Sports (اختر رياضاتك المفضلة)</legend>
+            <div class="checkbox-option select-all-wrapper">
+              <input type="checkbox" id="select-all-sports" /><label
+                for="select-all-sports"
+                >✅ تحديد الكل</label
+              >
+            </div>
+            <hr />
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-football"
+                name="fav_sports"
+                value="Football"
+                class="sport-checkbox"
+              /><label for="sport-football">⚽ Football - كرة القدم</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-basketball"
+                name="fav_sports"
+                value="Basketball"
+                class="sport-checkbox"
+              /><label for="sport-basketball">🏀 Basketball - كرة السلة</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-volleyball"
+                name="fav_sports"
+                value="Volleyball"
+                class="sport-checkbox"
+              /><label for="sport-volleyball"
+                >🏐 Volleyball - الكرة الطائرة</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-handball"
+                name="fav_sports"
+                value="Handball"
+                class="sport-checkbox"
+              /><label for="sport-handball">🤾 Handball - كرة اليد</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-waterpolo"
+                name="fav_sports"
+                value="Water Polo"
+                class="sport-checkbox"
+              /><label for="sport-waterpolo">🤽 Water Polo - كرة الماء</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-squash"
+                name="fav_sports"
+                value="Squash"
+                class="sport-checkbox"
+              /><label for="sport-squash">🎾 Squash - الإسكواش</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-tennis"
+                name="fav_sports"
+                value="Tennis"
+                class="sport-checkbox"
+              /><label for="sport-tennis">🎾 Tennis - التنس</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-tabletennis"
+                name="fav_sports"
+                value="Table Tennis"
+                class="sport-checkbox"
+              /><label for="sport-tabletennis"
+                >🏓 Table Tennis - تنس الطاولة</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-badminton"
+                name="fav_sports"
+                value="Badminton"
+                class="sport-checkbox"
+              /><label for="sport-badminton"
+                >🏸 Badminton - الريشة الطائرة</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-swimming"
+                name="fav_sports"
+                value="Swimming"
+                class="sport-checkbox"
+              /><label for="sport-swimming">🏊 Swimming - السباحة</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-athletics"
+                name="fav_sports"
+                value="Athletics"
+                class="sport-checkbox"
+              /><label for="sport-athletics">🏃 Athletics - ألعاب القوى</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-running"
+                name="fav_sports"
+                value="Running"
+                class="sport-checkbox"
+              /><label for="sport-running">🏃 Running - الجري</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-cycling"
+                name="fav_sports"
+                value="Cycling"
+                class="sport-checkbox"
+              /><label for="sport-cycling">🚴 Cycling - ركوب الدراجات</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-boxing"
+                name="fav_sports"
+                value="Boxing"
+                class="sport-checkbox"
+              /><label for="sport-boxing">🥊 Boxing - الملاكمة</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-wrestling"
+                name="fav_sports"
+                value="Wrestling"
+                class="sport-checkbox"
+              /><label for="sport-wrestling">🤼 Wrestling - المصارعة</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-judo"
+                name="fav_sports"
+                value="Judo"
+                class="sport-checkbox"
+              /><label for="sport-judo">🥋 Judo - الجودو</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-karate"
+                name="fav_sports"
+                value="Karate"
+                class="sport-checkbox"
+              /><label for="sport-karate">🥋 Karate - الكاراتيه</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-taekwondo"
+                name="fav_sports"
+                value="Taekwondo"
+                class="sport-checkbox"
+              /><label for="sport-taekwondo">🥋 Taekwondo - التايكوندو</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-kickboxing"
+                name="fav_sports"
+                value="Kickboxing"
+                class="sport-checkbox"
+              /><label for="sport-kickboxing"
+                >🥊 Kickboxing - الكيك بوكسينج</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-kungfu"
+                name="fav_sports"
+                value="Kung Fu"
+                class="sport-checkbox"
+              /><label for="sport-kungfu">🥋 Kung Fu - الكونغ فو</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-sambo"
+                name="fav_sports"
+                value="Sambo"
+                class="sport-checkbox"
+              /><label for="sport-sambo">🤼 Sambo - السامبو</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-fencing"
+                name="fav_sports"
+                value="Fencing"
+                class="sport-checkbox"
+              /><label for="sport-fencing">🤺 Fencing - المبارزة</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-weightlifting"
+                name="fav_sports"
+                value="Weightlifting"
+                class="sport-checkbox"
+              /><label for="sport-weightlifting"
+                >🏋️ Weightlifting - رفع الأثقال</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-gymnastics"
+                name="fav_sports"
+                value="Gymnastics"
+                class="sport-checkbox"
+              /><label for="sport-gymnastics">🤸 Gymnastics - الجمباز</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-shooting"
+                name="fav_sports"
+                value="Shooting"
+                class="sport-checkbox"
+              /><label for="sport-shooting">🎯 Shooting - الرماية</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-archery"
+                name="fav_sports"
+                value="Archery"
+                class="sport-checkbox"
+              /><label for="sport-archery">🏹 Archery - الرماية بالقوس</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-equestrian"
+                name="fav_sports"
+                value="Equestrian"
+                class="sport-checkbox"
+              /><label for="sport-equestrian">🐎 Equestrian - الفروسية</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-rowing"
+                name="fav_sports"
+                value="Rowing"
+                class="sport-checkbox"
+              /><label for="sport-rowing">🚣 Rowing - التجديف</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-canoe"
+                name="fav_sports"
+                value="Canoe/Kayak"
+                class="sport-checkbox"
+              /><label for="sport-canoe"
+                >🛶 Canoe/Kayak - الكانوي والكاياك</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-sailing"
+                name="fav_sports"
+                value="Sailing"
+                class="sport-checkbox"
+              /><label for="sport-sailing">⛵ Sailing - الشراع</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-diving"
+                name="fav_sports"
+                value="Diving"
+                class="sport-checkbox"
+              /><label for="sport-diving">🤿 Diving - الغطس</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-waterskiing"
+                name="fav_sports"
+                value="Water Skiing"
+                class="sport-checkbox"
+              /><label for="sport-waterskiing"
+                >🎿 Water Skiing - التزلج على الماء</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-chess"
+                name="fav_sports"
+                value="Chess"
+                class="sport-checkbox"
+              /><label for="sport-chess">♟️ Chess - الشطرنج</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-billiards"
+                name="fav_sports"
+                value="Billiards"
+                class="sport-checkbox"
+              /><label for="sport-billiards">🎱 Billiards - البلياردو</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-pentathlon"
+                name="fav_sports"
+                value="Modern Pentathlon"
+                class="sport-checkbox"
+              /><label for="sport-pentathlon"
+                >🏅 Modern Pentathlon - الخماسي الحديث</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-triathlon"
+                name="fav_sports"
+                value="Triathlon"
+                class="sport-checkbox"
+              /><label for="sport-triathlon">🏊 Triathlon - الترياثلون</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-skateboarding"
+                name="fav_sports"
+                value="Skateboarding"
+                class="sport-checkbox"
+              /><label for="sport-skateboarding"
+                >🛹 Skateboarding - التزلج على اللوح</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-climbing"
+                name="fav_sports"
+                value="Rock Climbing"
+                class="sport-checkbox"
+              /><label for="sport-climbing"
+                >🧗 Rock Climbing - تسلق الصخور</label
+              >
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-yoga"
+                name="fav_sports"
+                value="Yoga"
+                class="sport-checkbox"
+              /><label for="sport-yoga">🧘 Yoga - اليوجا</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-fitness"
+                name="fav_sports"
+                value="Fitness"
+                class="sport-checkbox"
+              /><label for="sport-fitness">💪 Fitness - اللياقة البدنية</label>
+            </div>
+            <div class="checkbox-option">
+              <input
+                type="checkbox"
+                id="sport-crossfit"
+                name="fav_sports"
+                value="CrossFit"
+                class="sport-checkbox"
+              /><label for="sport-crossfit">🏋️ CrossFit - كروس فت</label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Send</button>
+            <button type="reset" class="reset-btn">Delete</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ── Mental Arithmetic ── -->
+      <section id="mental-arithmetic" aria-labelledby="math-heading">
+        <h2 id="math-heading">Mental Arithmetic</h2>
+        <ul>
+          <li>113 × 60 = ?</li>
+          <li>592 × 80 + 10 = ?</li>
+          <li>423 × 100 = ?</li>
+          <li>567 × 23 ÷ 432 = ?</li>
+          <li>884 × 33 ÷ 65 = ?</li>
+          <li>664 × 755 ÷ 42 = ?</li>
+          <li>653 × 53 ÷ 32 = ?</li>
+          <li>565 × 54 ÷ 43 = ?</li>
+          <li>354 × 43 ÷ 46 = ?</li>
+          <li>363 × 523 ÷ 35 = ?</li>
+          <li>326 × 243 ÷ 24 = ?</li>
+          <li>351 × 593 ÷ 98 = ?</li>
+          <li>256 × 344 ÷ 42 = ?</li>
+          <li>386 × 123 ÷ 43 = ?</li>
+          <li>123 × 345 ÷ 78 = ?</li>
+          <li>456 × 912 ÷ 56 = ?</li>
+          <li>789 × 529 ÷ 34 = ?</li>
+          <li>987 × 789 ÷ 12 = ?</li>
+        </ul>
+      </section>
+
+      <!-- ── Achievements Counter ── -->
+      <section class="counter-section">
+        <h2>Our Achievements</h2>
+        <p>Numbers That Speak For Us</p>
+        <div class="counter-container">
+          <div class="counter-box">
+            <i>👥</i>
+            <h3 class="counter" data-target="15000">0</h3>
+            <span>Happy Members</span>
+          </div>
+          <div class="counter-box">
+            <i>🏆</i>
+            <h3 class="counter" data-target="350">0</h3>
+            <span>Professional Coaches</span>
+          </div>
+          <div class="counter-box">
+            <i>🥇</i>
+            <h3 class="counter" data-target="1000">0</h3>
+            <span>Championships</span>
+          </div>
+          <div class="counter-box">
+            <i>⭐</i>
+            <h3 class="counter" data-target="99">0</h3>
+            <span>Customer Satisfaction %</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Testimonials ── -->
+      <!--
+        ⚠️ محتوى تجريبي (Sample Content):
+        الآراء والصور دي أمثلة بس لعرض شكل التصميم.
+        قبل ما تنشر الموقع لعميل حقيقي، استبدلها بآراء عملائه الفعليين وصورهم.
+      -->
+      <section class="testimonials">
+        <h2>What Our Members Say</h2>
+        <p>Real Reviews From Our Happy Members</p>
+
+        <div class="testimonial active">
+          <img src="https://i.pravatar.cc/120?img=11" alt="Ahmed Mohamed" />
+          <h3>Ahmed Mohamed</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>
+            The coaches are professional and the training environment is
+            outstanding.
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/120?img=12" alt="Sara Ali" />
+          <h3>Sara Ali</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>I achieved my fitness goals much faster than I expected.</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/120?img=13" alt="Omar Hassan" />
+          <h3>Omar Hassan</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>The equipment is modern and always clean. Highly recommended.</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/120?img=14" alt="Mona Ibrahim" />
+          <h3>Mona Ibrahim</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>Excellent customer service and friendly staff.</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://i.pravatar.cc/120?img=15" alt="Youssef Adel" />
+          <h3>Youssef Adel</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>The swimming coaches are experienced and very supportive.</p>
+        </div>
+        <div class="testimonial">
+          <img
+            src="images/521fe9e4-adf5-4db0-8111-1235c1677238.png"
+            alt="Mohamed Gharib"
+          />
+          <h3>Mohamed Gharib</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>
+            Amazing work! I really love the quality and professionalism. Keep it
+            up! 👏🔥
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Contact ── -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Us</h2>
+        <p><a class="contact-btn" href="contact.html">📧 Send Email</a></p>
+        <p>📧 sportcenter@gmail.com</p>
+        <p>☎ <a href="tel:01098860054" class="phone-link">01098860054</a></p>
+      </section>
+
+      <!-- ── FAQ ── -->
+      <section id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              What sports are available in EliteSports Pro?<span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We provide football, swimming, basketball, fitness, martial arts
+                and many other sports.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Are there professional trainers?<span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, our coaches are experienced and specialized in different
+                sports fields.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can beginners join the center?<span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Of course, we have training programs suitable for beginners and
+                professionals.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What are the subscription prices?<span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Prices depend on the sport and training plan. Contact us for
+                details.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you provide modern equipment?<span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we have modern and safe equipment for all training
+                programs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══ Footer ═══ -->
+    <footer>
+      <p>© 2026 EliteSports Pro - All Rights Reserved</p>
+      <p>⭐ Professional Training | 💪 Modern Equipment | 🏀 Multiple Sports</p>
+      <p>إعداد المبرمج / محمد غريب و يونس غريب</p>
+    </footer>
+
+    <!-- ═══ AI Assistant ═══ -->
+    <button id="assistant-toggle" class="assistant-toggle">🤖</button>
+
+    <div id="assistant-panel">
+      <div class="assistant-header">
+        <h3>🤖 Smart Sports AI</h3>
+        <div>
+          <button id="new-chat-btn" title="محادثة جديدة">📝</button>
+          <button id="theme-btn" title="الوضع الليلي">🌙</button>
+          <button id="close-assistant">❌</button>
+        </div>
+      </div>
+      <div id="chat-history">
+        <button id="clear-chat-btn">🗑️ مسح المحادثة</button>
+      </div>
+      <div id="chat-messages">
+        <div class="bot-message">
+          <div class="message">
+            👋 أهلاً بك في Smart Sports AI<br />كيف يمكنني مساعدتك؟
+          </div>
+        </div>
+      </div>
+      <div class="assistant-input-area">
+        <button id="upload-btn" title="رفع ملف">📎</button>
+        <input id="user-input" type="text" placeholder="اكتب سؤالك..." />
+        <button id="send-btn">إرسال</button>
+        <button id="voice-btn">🎤</button>
+        <input type="file" id="file-input" hidden />
+      </div>
+    </div>
+
+    <!-- ═══ Scroll Buttons ═══ -->
+    <div class="scroll-buttons">
+      <button id="scroll-top" aria-label="Back To Top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+      <button id="scroll-bottom" aria-label="Go To Bottom">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <!-- ═══ Scripts ═══ -->
+    <script src="javascript/script.js"></script>
+    <script src="javascript/enhancements.js"></script>
+    <script src="javascript/global-bg.js"></script>
+    <script src="javascript/admin-panel.js"></script>
+    <script src="javascript/pricing-tools.js"></script>
+
+    <!-- ═══ تسجيل PWA Service Worker ═══ -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("service-worker.js").catch((err) => {
+            console.warn(
+              "[PWA] Service worker registration failed (non-fatal):",
+              err,
+            );
+          });
+        });
+      }
+    </script>
+
+    <!-- ═══ Firebase SDK ═══ -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  </body>
+</html>

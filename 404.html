@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404 | Page Not Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        background: linear-gradient(135deg, #f5f9ff, #e9f4ff);
+
+        overflow: hidden;
+      }
+
+      .container {
+        width: 90%;
+
+        max-width: 800px;
+
+        background: white;
+
+        border-radius: 25px;
+
+        padding: 60px;
+
+        text-align: center;
+
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+
+        animation: fade 1s ease;
+      }
+
+      .logo {
+        font-size: 32px;
+
+        font-weight: 700;
+
+        color: #0077ff;
+
+        margin-bottom: 20px;
+      }
+
+      .error {
+        font-size: 170px;
+
+        font-weight: 700;
+
+        color: #0077ff;
+
+        line-height: 1;
+      }
+
+      .title {
+        font-size: 42px;
+
+        font-weight: 700;
+
+        margin-top: 10px;
+
+        color: #222;
+      }
+
+      .desc {
+        margin-top: 20px;
+
+        font-size: 19px;
+
+        line-height: 1.8;
+
+        color: #666;
+      }
+
+      .buttons {
+        margin-top: 40px;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 16px 40px;
+
+        text-decoration: none;
+
+        border-radius: 50px;
+
+        font-size: 17px;
+
+        font-weight: 600;
+
+        transition: 0.4s;
+      }
+
+      .home {
+        background: #0077ff;
+
+        color: white;
+      }
+
+      .home:hover {
+        background: #005be3;
+
+        transform: translateY(-5px);
+      }
+
+      .contact {
+        border: 2px solid #0077ff;
+
+        color: #0077ff;
+      }
+
+      .contact:hover {
+        background: #0077ff;
+
+        color: white;
+
+        transform: translateY(-5px);
+      }
+
+      footer {
+        margin-top: 45px;
+
+        color: #777;
+
+        font-size: 15px;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 40px 25px;
+        }
+
+        .error {
+          font-size: 120px;
+        }
+
+        .title {
+          font-size: 30px;
+        }
+
+        .desc {
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo">🏆 EliteSports Pro</div>
+
+      <div class="error">404</div>
+
+      <h1 class="title">Oops! Page Not Found</h1>
+
+      <p class="desc">
+        عذرًا، الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها.<br /><br />
+
+        The page you are looking for doesn't exist or has been moved.
+      </p>
+
+      <div class="buttons">
+        <a href="index.html" class="btn home"> 🏠 Back Home </a>
+
+        <a href="contact.html" class="btn contact"> 📞 Contact Us </a>
+      </div>
+
+      <footer>© 2026 EliteSports Pro • All Rights Reserved</footer>
+    </div>
+  </body>
+</html>

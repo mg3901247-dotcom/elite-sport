@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | EliteSports Pro</title>
+
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+
+    <div class="contact-page">
+      <div class="contact-left">
+        <h1>🏆 EliteSports Pro</h1>
+        <p>
+          We would love to hear from you.<br />
+          Send us your message anytime.
+        </p>
+        <img
+          src="images/521fe9e4-adf5-4db0-8111-1235c1677238.png"
+          alt="EliteSports Pro"
+        />
+      </div>
+
+      <div class="contact-right">
+        <form
+          id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="success.html"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don't fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              required
+              minlength="3"
+              maxlength="50"
+              autocomplete="name"
+              spellcheck="false"
+            />
+            <span
+              class="clear-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Clear name field"
+              >✖</span
+            >
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              maxlength="100"
+              autocomplete="email"
+              spellcheck="false"
+            />
+            <span
+              class="clear-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Clear email field"
+              >✖</span
+            >
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-phone"></i>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              inputmode="numeric"
+              autocomplete="tel"
+              pattern="[0-9]{11}"
+              maxlength="11"
+            />
+            <span
+              class="clear-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Clear phone field"
+              >✖</span
+            >
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-tag"></i>
+            <input
+              type="text"
+              id="sport"
+              name="sport"
+              placeholder="Favorite Sport"
+              required
+              maxlength="40"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <span
+              class="clear-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Clear sport field"
+              >✖</span
+            >
+          </div>
+
+          <div class="input-group textarea">
+            <i class="fa-solid fa-message"></i>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message..."
+              required
+              minlength="10"
+              maxlength="1000"
+              rows="7"
+              spellcheck="true"
+            ></textarea>
+            <span
+              class="clear-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Clear message field"
+              >✖</span
+            >
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="javascript/enhancements.js"></script>
+    <script src="javascript/contact.js"></script>
+    <script src="javascript/global-bg.js"></script>
+    <script src="javascript/admin-panel.js"></script>
+  </body>
+</html>

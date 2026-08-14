@@ -1,0 +1,25 @@
+EliteSports Pro License Agreement
+
+Copyright © 2026 EliteSports Pro.
+All Rights Reserved.
+
+This project is protected by copyright.
+
+The buyer is allowed to:
+✔ Use the project.
+✔ Modify the project.
+✔ Publish the project.
+
+The buyer is NOT allowed to:
+✖ Resell the project unless agreed.
+✖ Redistribute the project.
+✖ Claim ownership of the original source code.
+
+Exclusive License:
+If this project is sold with exclusive rights, the developer will not sell the same version again.
+
+Developer:
+Your Name
+
+Email:
+your@email.com
